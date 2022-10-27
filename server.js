@@ -50,6 +50,7 @@ app.post('/api/notes', (req, res) => {
 )
 
 app.delete('/api/notes/:id', (req, res) => {
+    console.log(req.params);
     const { id } = req.params;
     for (i = 0; i < db.length; i++) {
         if (id === db[i].id) {
@@ -58,12 +59,14 @@ app.delete('/api/notes/:id', (req, res) => {
                 (err) ? console.log(err) : console.log("Note deleted")
             })
             res.status(201).json(db);
-        } else {
+            return;
+        } 
+    }
             res.status(500).json('Error in deleting your note');
-        }
+        
         
     }
-})
+        )
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"))

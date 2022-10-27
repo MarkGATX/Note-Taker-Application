@@ -7,7 +7,7 @@ An application to help take and keep notes during the day
 ___
 
 
-Our introduction to Node.js and object oriented programming culminates in this project. We use modules to write, navigate, and test data that we then use to write to a new HTML page. This is purely a command line interface that uses the Inquirer package as well as Jest, and fs to create a basic HTML page. I also used Bootstrap to keep pushing my familiarity with the framework.
+This challenge is meant to test our understanding of basic server side functions using Express. We were given extensive starter code that wasn't functioning correctly and our goal was to refactor the code to get it working as intended. 
 
 Because this isn't a deployed app, there's not a link to a live site showing it's functionality. Instead you can watch a short video here that shows how it works at its most basic.
 
