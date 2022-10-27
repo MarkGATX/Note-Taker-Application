@@ -7,11 +7,11 @@ An application to help take and keep notes during the day
 ___
 
 
-This challenge is meant to test our understanding of basic server side functions using Express. We were given extensive starter code that wasn't functioning correctly and our goal was to refactor the code to get it working as intended. 
+This challenge is meant to test our understanding of basic server side functions using Express. We were given extensive starter code that completely built out the front end. However, it wasn't functioning correctly. Our goal was to build the server backend and connect it to the front end to get it working as intended. 
 
-Because this isn't a deployed app, there's not a link to a live site showing it's functionality. Instead you can watch a short video here that shows how it works at its most basic.
+Let's take a look at how the app works and what we were responsible for building.
 
-[Video of the Development Team Generator in Action](https://drive.google.com/file/d/1lSUTUFGxwM-rN99UC_Orp-QTecgInhgt/view)
+This app is deployed on Heroku and you can see by visiting [this link](https://note-taker-project-uta.herokuapp.com/).
 
 
 ___
@@ -20,26 +20,30 @@ ___
 
 ## How to use
 
-From the parent folder of the index.js file, call on index.js. Several questions will be sent to the command line asking you for vital information about your development team members. 
+From the main page, you'll start by clicking on the 'Get Started' button in the middle of the page. That will take you to the notes pages. To the left, you'll see a list of all the notes that are currently saved in your JSON file. To the right is the area where you can add more notes.
 
-![Command line interface for Team Generator](./images/Team%20Roster%20commands%20and%20questions.jpg)
+![Main page for the Note Taker App](./Assets/Note%20taker%20main%20page.jpg)
 
-Each employee has four questions to answer. At the end of those four questions, you'll be asked if you want to add any more employees, either Engineers or Interns. (The assumption here is that there will be one Manager on the team).
+To add notes, fill in the title and add some information to the note. Click the 'save' icon in the upper right corner. Your new note will be added to the list at the left.
 
-When you're finished with the employees on your team, you'll choose 'Finish.' An HTML page will be generated in the `dist` folder. You can open this page to see a graphical, responsive rendering of your team.
+If you want to look at a previous note, simply click on the note and the area to the right of the screen will populate with all of that note's information.
+![Notes page for note taker app](./Assets/Notes%20in%20the%20note%20taker%20app.jpg)
 
-![Generated HTML page for Development Team](./images/Team%20Roster%20generated%20HTML%20page.jpg)
+If you'd like to delete a note, simply click on the trash can icon next to the note you want to delete.
+
+If you'f like to look at the raw JSON data, you can also access the API via [https://note-taker-project-uta.herokuapp.com/api/notes](https://note-taker-project-uta.herokuapp.com/api/notes)
+
 
 ___
 
 
 ## Changes Made and Lessons Learned
 
-- As my first experience dealing with Classes and Subclasses this project, this helped me really grasp the concept of creating them more than the purely abstract concept. This project gave me one of the 'ah ha!' moments that we all hear about when I was constructing my subclasses. 
+- Setting up the basic server environment in Express is fairly straightforward. You'll be using the same commands in virtually every deployment, so that part of the challenge wasn't hard to grasp. 
 
-- I'm continuing to push my familiarity with Bootstrap and it is getting slightly more intuitive with every iteration. I still find myself customizing the CSS and I realize now that if I use version 5.0 then I can theoretically override the default color values and have Bootstrap automatically assign complimentary colors. I will need to learn hpw to use SaSS in order to make that work but if it gives me more freedom with color then it's worth the effort.
+- I did learn that not all modules are created the same. I spent a long time trying to track down errors that just didn't make sense to me. I finally noticed that a module I grabbed from npm to add unique id numbers wasn't working. I tried troubleshooting the module but couldn't get it to work. I eventually decided the simplest route would be to use the helped application that we used in earlier assignments to assign random ID numbers. Once I did that, most of the errors went away.
 
-- Creating the tests became an issue of me overthinking my problems. I went from trying to create new methods to pull data from the main application without realizing all I needed to do was create testing data independent of the actual application. Life suddenly made more sense.
+- While we haven't gone over handline DELETE requests via API, we were given a challenge of making delete work within the framework we were given. I really liked making it work like that because for me it really emphasized the flexibility you have when you define your routes. We can make a lot of decisions and events happen on the backend just by customing the routes people use on the site.
 
 
 ___
@@ -48,9 +52,7 @@ ___
 
 ## Possible Future Changes
 
-- Resize Material Icons on the cards so they show up better.
-- Integrate validation on the inquirer prompts.
-
+- To be honest I probably won't revisit this code since the vast majority was already in place before I got it. While it can be a good reference if I need to remember how something worked or didn't work, I think this project is complete.
 
 
 ___
